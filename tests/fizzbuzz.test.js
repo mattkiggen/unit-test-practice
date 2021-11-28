@@ -1,7 +1,7 @@
 const { fizzBuzz } = require('../fizzbuzz');
 
 describe('fizzBuzz', () => {
-  it('should throw an error if input is not a Number', () => {
+  it('should throw an exception if input is not a Number', () => {
     expect(() => {
       fizzBuzz('5');
     }).toThrow();
