@@ -2,9 +2,11 @@ const { fizzBuzz } = require('../fizzbuzz');
 
 describe('fizzBuzz', () => {
   it('should throw an exception if input is not a Number', () => {
-    expect(() => {
-      fizzBuzz('5');
-    }).toThrow();
+    expect(() => fizzBuzz('5')).toThrow();
+    expect(() => fizzBuzz(null)).toThrow();
+    expect(() => fizzBuzz(undefined)).toThrow();
+    expect(() => fizzBuzz({})).toThrow();
+    expect(() => fizzBuzz([])).toThrow();
   });
 
   it('should return FizzBuzz if input is divisible by 3 and 5', () => {
